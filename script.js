@@ -47,5 +47,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   setCookie("fontsize", fontSize, 7);
   setCookie("fontcolor", fontColor, 7);
 
-  // Apply
-
+  // ✅ Apply immediately
+  document.documentElement.style.setProperty("--fontsize", fontSize + "px");
+  document.documentElement.style.setProperty("--fontcolor", fontColor);
+});
